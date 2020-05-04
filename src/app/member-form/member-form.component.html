@@ -1,0 +1,79 @@
+ <!-- Default form login -->
+ <form  [formGroup]="selectForm" class="text-right border border-light g-form-box">
+        
+
+    <h2 class="header">Search</h2>
+
+
+    <input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+        placeholder="Member No">
+
+
+    <input type="text" id="defaultLoginFormPassword" class="form-control
+        mb-4"
+        placeholder="Name">
+
+    <input type="text" id="defaultLoginFormPassword" class="form-control
+        mb-4"
+        placeholder="Organization">
+
+    <select formControlName="deptControl" class="browser-default custom-select form-control mb-4">
+        <option selected>Department</option>
+        <option  [value]="department" *ngFor="let department of departments"> 
+
+            {{department}}
+
+        </option>
+    </select>
+
+    <select formControlName="hallControl" formname="hallCode" class="browser-default custom-select
+        form-control
+        mb-4">
+        <option selected>Hall</option>
+        <option  [value]="hal" *ngFor="let hal of halls"> 
+
+            {{hal.name}}
+
+        </option>
+        
+    </select>
+
+    <input type="text" id="defaultLoginFormPassword" class="form-control
+        mb-4"
+        placeholder="Room Number">
+
+    <select  formControlName="partnerControl"  class="browser-default custom-select
+        form-control
+        mb-4">
+        <option selected>Life Member</option>
+        <option [value]='part' *ngFor="let part of partner">{{part}}</option>
+        
+    </select>
+
+    <select formControlName="bloodControl" class="browser-default custom-select form-control mb-4">
+        <option selected>Blood Group</option>
+        <option *ngFor="let bg of blood" [value]="bg"> 
+            {{bg}}
+        </option>
+        
+    </select>
+
+    <input type="text" id="defaultLoginFormPassword" class="form-control
+        mb-4"
+        placeholder="City">
+
+    <select formControlName="countryControl" class="browser-default custom-select
+        form-control
+        mb-4">
+        <option selected>Country</option>
+        <option [value]="coun" *ngFor="let coun of country"> {{coun}}</option>
+    </select>
+
+
+    <!-- Sign in button -->
+<button type="button" mdbBtn color="light" mdbWavesEffect class="mr-3">Reset</button>
+<button type="button" mdbBtn color="primary" mdbWavesEffect class="buet-btn-primary m-0">Search</button>
+
+</form>
+<!-- Default form login -->
+

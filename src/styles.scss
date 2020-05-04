@@ -1,0 +1,385 @@
+@import '~material-icons/iconfont/material-icons.css';
+
+/* You can add global styles to this file, and also import other style files */
+html {
+    position  : relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom   : 60px;
+    background-color: #bfccd6;
+    background-image: linear-gradient(0deg, #bfccd6 0%, #ededed 70%, #ffffff 99%);
+    overflow-x      : hidden;
+}
+
+a {
+
+    color: #880e4f;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin     : 0 10px;
+    font-weight: 500;
+}
+
+.btn-primary.buet-btn-primary {
+    background-color: #880e4f !important;
+}
+
+.btn-primary.buet-btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary.buet-btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.buet-btn-primary.dropdown-toggle {
+    background-color: #880e4f !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #eaedf5;
+}
+
+.site-footer {
+    position: absolute;
+    bottom  : 0;
+    width   : 100%;
+}
+
+.navbar-brand {
+    background-image : url(assets/Images/buet88-club-logo.png);
+    background-repeat: no-repeat;
+    width            : 74px;
+    height           : 100px;
+    text-indent      : -999999px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.navbar {
+    background-color  : #fff;
+    -webkit-box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow   : 0px 2px 12px -3px rgba(0, 0, 0, 0.12);
+    box-shadow        : 0px 2px 12px -3px rgba(0, 0, 0, 0.12);
+    padding           : 0.5rem 30px;
+    z-index           : 999;
+}
+
+.content-container {
+    padding: 35px 30px;
+}
+
+.nicescroll-cursors {
+    background-color: #914b4d !important;
+    cursor          : pointer;
+}
+
+.nicescroll-rails {
+    background-color: #c4c4c4 !important;
+}
+
+.table-wrapper {
+
+    background   : #fff;
+    border-radius: 3px;
+    box-shadow   : 0 1px 1px rgba(0, 0, 0, .05);
+
+}
+
+.table-title {
+    padding-bottom: 15px;
+    background    : #dc5e5c;
+    color         : #fff;
+    padding       : 16px 30px;
+    /* margin     : -20px -25px 10px; */
+    border-radius : 3px 3px 0 0;
+}
+
+.table-title h2 {
+    margin   : 5px 0 0;
+    font-size: 24px;
+    color    : #fff;
+}
+
+table.table td a {
+
+    font-weight    : bold;
+    color          : #566787;
+    display        : inline-block;
+    text-decoration: none;
+
+}
+
+table.table .avatar {
+
+    border-radius : 50%;
+    vertical-align: middle;
+    margin-right  : 10px;
+    width         : 50px;
+
+}
+
+.table-title .btn {
+    color        : #566787;
+    float        : right;
+    font-size    : 13px;
+    background   : #fff;
+    border       : none;
+    min-width    : 50px;
+    border-radius: 2px;
+    border       : none;
+    outline      : none !important;
+    margin-left  : 10px;
+}
+
+.table-title .btn:hover,
+.table-title .btn:focus {
+    color     : #566787;
+    background: #f2f2f2;
+}
+
+.table-title .btn i {
+    float       : left;
+    font-size   : 21px;
+    margin-right: 5px;
+}
+
+.table-title .btn span {
+    float     : left;
+    margin-top: 2px;
+}
+
+table.table tr th,
+table.table tr td {
+    border-color  : #e9e9e9;
+    padding       : 12px 15px;
+    vertical-align: middle;
+}
+
+table.table tr th:first-child {
+    width: 60px;
+}
+
+table.table tr th:last-child {
+    width: 100px;
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+
+table.table th i {
+    font-size: 13px;
+    margin   : 0 5px;
+    cursor   : pointer;
+}
+
+table.table td:last-child i {
+    opacity  : 0.9;
+    font-size: 22px;
+    margin   : 0 5px;
+}
+
+table.table td a {
+    font-weight    : bold;
+    color          : #566787;
+    display        : inline-block;
+    text-decoration: none;
+}
+
+table.table td a:hover {
+    color: #A82724;
+}
+
+table.table td a.settings {
+    color: #2196F3;
+}
+
+table.table td a.delete {
+    color: #d25a5a;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table .avatar {
+    border-radius : 50%;
+    vertical-align: middle;
+    margin-right  : 10px;
+    width         : 50px;
+    height        : 50px;
+}
+
+.hint-text {
+    float    : left;
+    margin   : 10px 15px;
+    font-size: 13px;
+}
+
+.pagination-container {
+    padding-top: 10px;
+    border-top : 1px solid #e6e6e6;
+}
+
+.pagination {
+    float : right;
+    margin: 0 15px 5px;
+}
+
+.pagination li a {
+    border       : none;
+    font-size    : 13px;
+    min-width    : 30px;
+    min-height   : 30px;
+    color        : #999;
+    margin       : 0 2px;
+    line-height  : 30px;
+    border-radius: 2px !important;
+    text-align   : center;
+    padding      : 0 6px;
+}
+
+.pagination .page-item.active .page-link {
+    background: #d25a5a;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #A82724;
+}
+
+.g-form-box {
+    width           : 600px;
+    margin          : 0 auto;
+    background-color: #ffffff;
+    font-size       : 24px;
+    padding         : 0 40px 40px;
+    border-radius   : 3px 3px 0 0;
+}
+
+.g-form-box h2.header {
+    background-color: #dc5e5c;
+    color           : #fff;
+    padding         : 20px 40px;
+    border-radius   : 3px 3px 0 0;
+    font-size       : 24px;
+    margin-left     : -40px;
+    margin-right    : -40px;
+    margin-bottom   : 40px;
+    text-align      : left;
+}
+
+.login-box {
+    width           : 450px;
+    margin          : 40px auto 0;
+    background-color: #fff;
+    padding         : 65px 40px 40px;
+    border-radius   : 3px 3px 0 0;
+    position        : relative;
+}
+
+.login-box div.user-ico {
+    background-color: #f5f5f5;
+    color           : #fff;
+    border-radius   : 50%;
+    margin-left     : -50px;
+    margin-right    : -40px;
+    margin-bottom   : 40px;
+    text-align      : left;
+    width           : 100px;
+    height          : 100px;
+    font-size       : 73px;
+    position        : absolute;
+    top             : -50px;
+    left            : 50%;
+}
+
+.login-box div.user-ico span {
+
+    font-size: 100px;
+    color    : #969090;
+}
+
+.login-box h2.header {
+    text-align   : center;
+    font-size    : 25px;
+    margin-bottom: 20px;
+}
+
+.sidebar-fixed {
+    height          : 100vh;
+    width           : 270px;
+    box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    z-index         : 1050;
+    background-color: #fff;
+    padding         : 0 1.5rem 1.5rem;
+}
+
+.admin-content {
+    padding-left: 300px;
+}
+
+.list-group-item.active {
+    z-index         : 2;
+    color           : #fff !important;
+    background-color: #b15555;
+    border-color    : #b15555;
+}
+
+.sidebar-fixed .list-group .active {
+
+    box-shadow   : 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    border-radius: 5px;
+}
+
+.sidebar-fixed .list-group .active:hover {
+
+    color: #ffffff;
+}
+
+.list-group-flush {
+    margin-top: 45px;
+}
+
+.list-group-item i {
+    color    : #880e4f;
+    font-size: 21px;
+}
+
+.list-group-item.active i {
+    color: #ffffff;
+}
+
+h1.header {
+    background-color: #efefef;
+    padding         : 13px 30px;
+    font-size       : 20px;
+    margin          : -34px -30px 30px;
+    border-bottom   : 1px solid #dedede;
+    display         : flex;
+    line-height     : 40px;
+    font-weight     : 500;
+}
+
+.btn.btn-add {
+    padding: 5px 10px;
+    margin : 0;
+}
+
+h1.header .btn.btn-add i {
+    color: #fff;
+}
+
+h1.header span.h-icon {
+    color: #a7abb3;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

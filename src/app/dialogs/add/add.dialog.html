@@ -1,0 +1,65 @@
+<div class="container">
+  <h3 mat-dialog-title>Add new Hall</h3>
+
+  <!-- <form class="mat-dialog-content" (ngSubmit)="onSubmit()" [formGroup] ="formDialog">
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control"  formControlName = "Position" placeholder="Position" [(ngModel)]="data.Position" name="Position" required >
+         <mat-error *ngIf="formDialog.invalid">{{getErrorMessage()}}</mat-error> 
+      </mat-form-field>
+    </div>
+
+   
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput class="form-control" formControlName="Name" placeholder="Name" [(ngModel)]="data.Name" name="Name">
+         <mat-error *ngIf="formDialog.invalid">{{getErrorMessage()}}</mat-error> 
+
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput class="form-control" formControlName="Added" placeholder="Added on" [(ngModel)]="data.AddedOn" name="AddedOn">
+
+      </mat-form-field>       
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button type ="submit"  [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+  </form> -->
+
+  <form class="mat-dialog-content" (ngSubmit)="submit()" #formControl="ngForm">
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Id" [(ngModel)]="data.Id" name="Id" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Name" [(ngModel)]="data.Name" name="Name" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+
+      </mat-form-field>
+    </div>
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Added On" [(ngModel)]="data.AddedOn" name="AddedOn" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+
+  </form>
+</div>

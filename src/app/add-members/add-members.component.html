@@ -1,0 +1,81 @@
+<!-- <div class="sidebar-fixed position-fixed">
+    <app-sidebar></app-sidebar>
+
+ </div>
+ -->
+
+        <!-- <div class="container-fluid content-container admin-content"> -->
+
+            <h1 class="header">
+
+              <button routerLink='add-members'>  <span class="fa-stack fa-1x h-icon mr-2">
+  <i class="fas fa-circle fa-stack-2x"></i>
+  <i class="far fa-address-card fa-stack-1x fa-inverse"></i>
+</span>Members </button>
+
+              
+                <span class="spacer"></span>
+                 <button routerLink="/login/admin-menu" type="button" mdbBtn color="secondary" class="waves-light btn-add" mdbWavesEffect><i class="fas fa-plus-circle mr-2"></i>Add members</button>
+            </h1>
+
+
+  <div class="table-wrapper">
+    <div class="form">
+        <mat-form-field floatPlaceholder="never" color="accent">
+            <input matInput #filter placeholder="Search filter">
+        </mat-form-field>
+    </div>
+
+    <div class="table-responsive">
+       
+           
+        <mat-table  #table [dataSource] = "dataSource" matSort>
+        
+            <ng-container *ngFor = "let col of displayedColumns;"  [matColumnDef]="col">
+                <mat-header-cell class="head"  *matHeaderCellDef mat-sort-header>{{col}} </mat-header-cell>
+                <div *ngIf="col==='Action';else elseBlock"> 
+                        <mat-cell class="action-link" *matCellDef="let row;let i=index;"  >
+                            <!-- (click) ="onEdit(row,i)"
+                            (click) ="OnDelete(row,i)" -->
+                            <button class="settings" title="Edit" data-toggle="tooltip"  data-original-title="Edit" mat-icon-button   >
+                                <mat-icon>
+                                    <i class="fas fa-edit"></i>
+                                </mat-icon>
+                            </button>
+                        
+                            <button class="delete" title="" data-toggle="tooltip"  data-original-title="Delete"  mat-icon-button   >
+                                <mat-icon>
+                                    <i class="fas fa-times-circle"></i>
+                                </mat-icon>
+                            </button>
+                        </mat-cell>
+                </div>
+                <ng-template #elseBlock>
+                    <mat-cell  class="colum" *matCellDef="let row" > {{row[col]}} </mat-cell> 
+                </ng-template>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+        </mat-table>    
+
+        </div>
+
+
+        <div class="pagination-container">
+            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20,25]"></mat-paginator> dataSource.filteredData.length-->
+            <mat-paginator
+                 [pageIndex]="0"
+                 [length] ="dataSource.filteredData.length"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+            </mat-paginator>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+            
+<!-- </div> -->
+

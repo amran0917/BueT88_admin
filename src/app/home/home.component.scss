@@ -1,0 +1,163 @@
+.site-content-warp {
+    position          : relative;
+    padding-top       : 0px;
+    padding-left      : 614px;
+    -webkit-transform : translateX(0);
+    transform         : translateX(0);
+    -webkit-transition: all 0.4s;
+    transition        : all 0.4s;
+}
+
+/* Left Side section */
+
+.main-sidebar {
+    position: absolute;
+    width   : 614px;
+    height  : 100%;
+    left    : 0;
+    top     : 0;
+    z-index : 99;
+}
+
+.main-sidebar .mb-warp {
+    padding: 90px;
+}
+
+.site-logo {
+    display      : block;
+    margin-bottom: 80px;
+}
+
+.site-logo h2 {
+    font-size     : 100px;
+    line-height   : 100px;
+    text-transform: uppercase;
+    font-weight   : 400;
+    letter-spacing: 18px;
+}
+
+.site-logo p {
+    font-size     : 12px;
+    text-transform: uppercase;
+    color         : #aaaaaa;
+    letter-spacing: 12px;
+    padding-left  : 10px;
+    margin-bottom : 0;
+}
+
+.about-info {
+    margin-bottom: 80px;
+    margin-top   : 20px;
+}
+
+.about-info h2 {
+    font-weight  : 900;
+    font-size    : 48px;
+    margin-bottom: 10px;
+    line-height  : 1.1;
+    font-family  : "Playfair Display", serif;
+}
+
+.contact-info {
+    list-style   : none;
+    margin-bottom: 65px;
+    position     : relative;
+}
+
+.contact-info:after {
+    position: absolute;
+    content : "";
+    width   : 26px;
+    height  : 32px;
+    left    : -36px;
+    top     : -5px;
+}
+
+.contact-info li {
+    font-size    : 14px;
+    color        : #aaaaaa;
+    margin-bottom: 5px;
+}
+
+.contact-info li a {
+    color: #242424;
+}
+
+.copyright {
+    font-size  : 13px;
+    color      : #69757d;
+    position   : fixed;
+    height     : 45px;
+    width      : 100%;
+    left       : 0;
+    bottom     : 0;
+    background : #b9c4ce;
+    padding-top: 17px;
+    text-align : center;
+
+}
+
+#ascrail2000-hr {
+    background: #fffafa78 !important;
+
+}
+
+
+.copyright a {
+    color          : #914b4d;
+    text-decoration: underline;
+}
+
+.copyright i {
+    color: rgba(204, 17, 17, 0.29);
+}
+
+/*------------------
+Hero section
+ ---------------------*/
+
+.hero-track {
+    padding-bottom: 12px;
+    overflow      : hidden;
+}
+
+.hs-item {
+    height      : 750px;
+    float       : left;
+    margin-right: 50px;
+    position    : relative;
+}
+
+.hs-item:last-child {
+    margin-right: 0;
+}
+
+.hs-item .hs-info {
+    position  : absolute;
+    left      : 0;
+    bottom    : 0;
+    width     : 221px;
+    padding   : 44px 0 10px 13px;
+    background: #c9d3dbc9;
+    z-index   : 1;
+}
+
+.hs-item .hs-info p {
+    margin-bottom: 5px;
+}
+
+.nicescroll-rails.nicescroll-rails-hr,
+#ascrail2000-hr {
+    max-width: calc(100% - 717px);
+    overflow : hidden;
+}
+
+.set-bg {
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: top center;
+}
+
+.about-description {
+    text-align: justify;
+}

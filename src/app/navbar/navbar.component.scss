@@ -1,0 +1,17 @@
+.search-input {
+    border-right: none;
+    font-size   : 14px;
+}
+
+.input-group-text {
+    background: transparent;
+    color     : #b15555;
+}
+
+.input-group {
+    margin-top: 2px;
+}
+input::placeholder
+{
+    color: #ccc;
+}
