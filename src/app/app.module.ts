@@ -1,5 +1,6 @@
+import { UpdateEventDialogComponent } from './dialogs/update-event/update-event.dialog.component';
+import { DeleteEventDialogComponent } from './dialogs/delete-event/delete-event.dialog.component';
 import { DeleteDialogComponent } from './dialogs/delete/delete.dialog.component';
-
 import { EditDialogComponent } from './dialogs/edit/edit.dialog.component';
 import { AddDialogComponent } from './dialogs/add/add.dialog.component';
 import { WorkService } from './services/work.service';
@@ -53,6 +54,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { HttpClientModule } from '@angular/common/http';
 import { connect } from 'http2';
+import { DeleteMemberDialogComponent } from './dialogs/delete-member/delete-member.dialog.component';
+import {AddMemberDialogComponent} from './dialogs/add-member/add-member.dialog.component';
+import { EditMemberDialogComponent } from './dialogs/edit-member/edit-member.dialog.component';
+import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +82,14 @@ import { connect } from 'http2';
     DialogBoxComponent,
     AddDialogComponent,
     EditDialogComponent,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    DeleteMemberDialogComponent,
+    AddMemberDialogComponent,
+    EditMemberDialogComponent,
+    DeleteEventDialogComponent,
+    AddEventDialogComponent,
+    UpdateEventDialogComponent
+
   ],
   imports: [
 
@@ -155,7 +167,13 @@ import { connect } from 'http2';
     DialogBoxComponent,
     AddDialogComponent,
     EditDialogComponent,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    DeleteMemberDialogComponent,
+    AddMemberDialogComponent,
+    EditMemberDialogComponent,
+    DeleteEventDialogComponent,
+    AddEventDialogComponent,
+    UpdateEventDialogComponent
   ],
   providers: [WorkService],
   bootstrap: [AppComponent]

@@ -1,0 +1,53 @@
+<div class="container">
+  <h3 mat-dialog-title>Add new Member</h3>
+
+  <form class="mat-dialog-content" (ngSubmit)="submit()" #formControl="ngForm">
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Id" [(ngModel)]="data.Id" name="Id" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <!--- **************Image Upload Test -->
+    <!-- Add Url in this input then it is works 
+    Should be used Relative path url-->
+    <div class="form">
+    
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Image" [(ngModel)]="data.Image" name="Image" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> 
+      </mat-form-field>
+  </div>
+
+  <!-- ****************Image Upload Test -->
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Name" [(ngModel)]="data.Name" name="Name" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+
+      </mat-form-field>
+    </div>
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Member Added On" [(ngModel)]="data.MemberAddedOn" name="MemberAddedOn" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Department" [(ngModel)]="data.Department" name="Department" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+
+  </form>
+</div>

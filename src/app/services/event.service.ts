@@ -1,19 +1,20 @@
-import { AddMember } from './../interface/AddMember.interface';
+import { AddEvent } from './../interface/AddEvent.interface';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MemberService {
+export class EventService {
+
   private url = 'https://localhost:44342/';
   public dialogData: any;
-  dataChange: BehaviorSubject<AddMember[]> = new BehaviorSubject<AddMember[]>([]);
+  dataChange: BehaviorSubject<AddEvent[]> = new BehaviorSubject<AddEvent[]>([]);
 
   constructor(private http: HttpClient) { }
 
-  get data(): AddMember[] {
+  get data(): AddEvent[] {
     return this.dataChange.value;
 
   }
@@ -21,7 +22,7 @@ export class MemberService {
     return this.dialogData;
   }
 
-  addIssue(issue: AddMember): void {
+  addIssue(issue: AddEvent): void {
     console.log(issue);
 //     let  object = Object.assign({}, ... issue);
     this.dialogData = issue;
@@ -59,30 +60,25 @@ export class MemberService {
 //     }
 //   );
 // }
-  updateIssue(issue: AddMember): void {
+  updateIssue(issue: AddEvent): void {
     this.dialogData = issue;
-    this.http.put(this.url + 'api/values2' + issue.Id, issue).subscribe();
+    this.http.put(this.url + 'api/events' + issue.Id, issue).subscribe();
   }
 
   deleteIssue(id: number): void {
     console.log('Deleted' + id);
-    this.http.delete(this.url + 'api/values2' + id, {headers: new HttpHeaders().set('Access-Control-Allow-Origin', '*')}).subscribe();
+    this.http.delete(this.url + 'api/events' + id, {headers: new HttpHeaders().set('Access-Control-Allow-Origin', '*')}).subscribe();
   }
 
   getAllIssues(): any {
-    this.http.get<any>(this.url + 'api/values2').subscribe(data => {
+    this.http.get<any>(this.url + 'api/events').subscribe(data => {
         this.dataChange.next(data);
       },
       (error: HttpErrorResponse) => {
         console.log (error.name + ' ' + error.message);
       });
     }
-    // public upload(formData) {
-
-    //   return this.http.post<any>(this.url, formData, {
-    //       reportProgress: true,
-    //       observe: 'events'
-    //     }); 
-    // }
 
 }
+
+

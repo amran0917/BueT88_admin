@@ -23,9 +23,7 @@ export class MembersComponent implements OnInit {
   ];
 
  
-  constructor() {
-    
-   }
+  constructor() {  }
 
   ngOnInit(): void {
   }
