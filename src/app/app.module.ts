@@ -1,3 +1,6 @@
+import { EventService } from './services/event.service';
+import { MemberService } from './services/member.service';
+import { RememberService } from './services/remember.service';
 import { UpdateEventDialogComponent } from './dialogs/update-event/update-event.dialog.component';
 import { DeleteEventDialogComponent } from './dialogs/delete-event/delete-event.dialog.component';
 import { DeleteDialogComponent } from './dialogs/delete/delete.dialog.component';
@@ -175,7 +178,7 @@ import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.co
     AddEventDialogComponent,
     UpdateEventDialogComponent
   ],
-  providers: [WorkService],
+  providers: [WorkService, RememberService, MemberService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

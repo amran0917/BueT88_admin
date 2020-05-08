@@ -57,7 +57,14 @@
                     </div>
 
                     <ng-template #elseBlock>
-                        <mat-cell  class="colum" *matCellDef="let row" > {{row[col]}} </mat-cell> 
+
+                        <div *ngIf="col==='Name';else elseBlock"> 
+                                <mat-cell  class="colum" *matCellDef="let row" > <a routerLink="/member-details">{{row[col]}} </a></mat-cell> 
+                         </div>
+                         <ng-template #elseBlock>
+                            <mat-cell  class="colum" *matCellDef="let row" > {{row[col]}} </mat-cell> 
+
+                         </ng-template>
 
                     </ng-template>
                 </ng-template>

@@ -1,6 +1,9 @@
 export interface Remember {
+
+    Id: number;
+    Image: string;
     Name: string;
-    Member_Added_On: string;
+    MemberAddedOn: string;
     Department: string;
     Hall: string;
 }
