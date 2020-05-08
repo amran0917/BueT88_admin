@@ -50,7 +50,13 @@
                                 </div>
             
                                 <ng-template #elseBlock>
+                                    <div *ngIf="col==='Event';else elseBlock"> 
+                                        <mat-cell  class="colum" *matCellDef="let row" > <a [routerLink]="['/event-details']" routerLinkActive="router-link-active" >{{row[col]}} </a></mat-cell> 
+                                 </div>
+                                 <ng-template #elseBlock>
                                     <mat-cell  class="colum" *matCellDef="let row" > {{row[col]}} </mat-cell> 
+        
+                                 </ng-template>
             
                                 </ng-template>
                             </ng-template>
