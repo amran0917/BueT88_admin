@@ -1,0 +1,80 @@
+<h1 class="header">
+
+    <span class="fa-stack fa-1x h-icon mr-2">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="far fa-building fa-stack-1x fa-inverse"></i>
+    </span>Department
+
+    <span class="spacer"></span> 
+    <button routerLink="/admin/add-dept"  type="button" mdbBtn color="secondary" class="waves-light btn-add" mdbWavesEffect><i class="fas fa-plus-circle mr-2"></i>Add Department</button>
+</h1>
+
+<div class="table-wrapper">
+   <div class="form">
+        <div class="form">
+            <mat-form-field floatPlaceholder="never" color="accent">
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="SearchFilter">
+
+            </mat-form-field>
+          </div> 
+    </div>
+
+  
+    <div class="table-responsive">
+
+        
+        <mat-table #table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="code">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
+                <mat-cell *matCellDef="let element; let i = index;"> {{ (paginatorRef.pageIndex * paginatorRef.pageSize) + (i + 1) }} </mat-cell>
+              </ng-container>
+             
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Dept_name </mat-header-cell  >
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="Action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    <button class="settings" title="Edit" data-toggle="tooltip"  data-original-title="Edit" mat-icon-button  (click)="onUpdate(element.code)">
+                        <mat-icon>
+                            <i class="fas fa-edit"></i>
+                        </mat-icon>
+                    </button>
+                
+                    <button class="delete" 
+                            title="" 
+                            mwlConfirmationPopover
+                            [popoverTitle] = "popoverTitle"
+                            [popoverMessage] = "popoverMessage"
+                            placement = "left"
+                            data-toggle="tooltip" 
+                            data-original-title="Delete" 
+                            mat-icon-button  (confirm) ="onDelete(element.code)"
+                            (cancel) = "cancelClicked = true" >
+                        <mat-icon>
+                            <i class="fas fa-times-circle"></i>
+                        </mat-icon>
+                    </button>
+                    
+                </mat-cell>
+              </ng-container>
+             
+             
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+
+
+    <div class="pagination-container">
+        
+<mat-paginator   #paginatorRef [pageSize]="10" [pageSizeOptions]="[5, 10, 20, 50, 100]" >
+</mat-paginator>
+       
+    </div>
+
+    <div class="clearfix"></div>
+
+</div>

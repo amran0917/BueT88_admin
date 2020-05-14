@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body p-5"> 
+      
+      <form class="mat-dialog-content" (ngSubmit)="onSubmit()" [formGroup] ="deptgroup" class="text-center col-md-4 ml-auto mr-auto">
+        <p>Add Department</p>
+          <div class="form">
+            <mat-form-field color="accent">
+              <input matInput #input class="form-control"  formControlName = "name" placeholder="Department Name"  required >
+            </mat-form-field>
+          </div>
+
+          <button type="submit"   [disabled]="!deptgroup.valid" class="btn btn-primary mr-3" mdbWavesEffect>Save</button>
+
+            <button color="danger"  class="btn btn-danger" (click) = "onClick()">Cancel</button>
+      </form>
+    </div>
+</div>

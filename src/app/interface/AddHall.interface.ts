@@ -1,6 +1,5 @@
 export interface AddHall {
-    Id: number;
-    Name: string;
+    code: number;
+    name: string;
 
-    AddedOn: string;
 }
