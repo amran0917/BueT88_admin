@@ -1,3 +1,7 @@
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
+import {MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar';
+
+import { MyService } from './services/my.service';
 import { EventService } from './services/event.service';
 import { MemberService } from './services/member.service';
 import { RememberService } from './services/remember.service';
@@ -11,7 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -61,6 +65,13 @@ import { DeleteMemberDialogComponent } from './dialogs/delete-member/delete-memb
 import {AddMemberDialogComponent} from './dialogs/add-member/add-member.dialog.component';
 import { EditMemberDialogComponent } from './dialogs/edit-member/edit-member.dialog.component';
 import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { AdminHallComponent } from './Adminpanel/admin-hall/admin-hall.component';
+import { AdminAddHallComponent } from './adminpanel/Dialogs/admin-add-hall/admin-add-hall.component';
+import { AdminEditHallComponent } from './adminpanel/Dialogs/admin-edit-hall/admin-edit-hall.component';
+import { AdminDepartmentComponent } from './adminpanel/admin-department/admin-department.component';
+import { AdminUpdateDeptComponent } from './adminpanel/Dialogs/admin-update-dept/admin-update-dept.component';
+import { AdminAddDeptComponent } from './adminpanel/Dialogs/admin-add-dept/admin-add-dept.component';
 
 @NgModule({
   declarations: [
@@ -91,8 +102,14 @@ import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.co
     EditMemberDialogComponent,
     DeleteEventDialogComponent,
     AddEventDialogComponent,
-    UpdateEventDialogComponent
-
+    UpdateEventDialogComponent,
+    AdminpanelComponent,
+    AdminHallComponent,
+    AdminAddHallComponent,
+    AdminEditHallComponent,
+    AdminDepartmentComponent,
+    AdminUpdateDeptComponent,
+    AdminAddDeptComponent
   ],
   imports: [
 
@@ -121,6 +138,7 @@ import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.co
     MatInputModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ConfirmationPopoverModule.forRoot({confirmButtonType: 'Danger'}),
     // ToastrModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot([
@@ -141,22 +159,26 @@ import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.co
       { path: 'user-login', component: UserLoginComponent },
       { path: 'search', component: SearchComponent },
       {path: 'footer', component: FooterComponent},
+      {path: 'sidebar', component: SidebarComponent},
+      {path: 'admin', component: AdminpanelComponent,
+        children: [
+          {path: '', component: AdminHallComponent},
+          // {path: 'admin-hall', component: AdminHallComponent},
+          { path: 'add-event', component: AddEventComponent},
+          {path: 'add-hall', component: AdminAddHallComponent},
+          {path: 'update-hall/:id', component: AdminEditHallComponent},
+          {path: 'department', component: AdminDepartmentComponent},
+          {path: 'add-dept', component: AdminAddDeptComponent},
+          {path: 'department/update-dept/:id', component: AdminUpdateDeptComponent},
+          {path: 'add-members', component: AddMembersComponent},
+
+
+        ]},
+
+
+
       { path: 'login/admin-menu', component: AdminMenuComponent ,
         children: [
-          // { path: 'add-hall', component: AddHallComponent,
-          //   children: [
-          //     {path: 'sidebar', component: SidebarComponent}
-          //   ]},
-          // {path: 'add-members', component: AddMembersComponent,
-          //   children: [
-          //     {path: 'sidebar', component: SidebarComponent}
-          //   ]},
-          // {path: 'add-event', component: AddEventComponent,
-          //   children: [
-          //     {path: 'sidebar', component: SidebarComponent}
-          //   ]}
-
-          {path: 'sidebar', component: SidebarComponent},
           { path: 'add-hall', component: AddHallComponent},
           {path: 'add-members', component: AddMembersComponent},
           { path: 'add-event', component: AddEventComponent}
@@ -176,9 +198,11 @@ import { AddEventDialogComponent } from './dialogs/add-event/add-event.dialog.co
     EditMemberDialogComponent,
     DeleteEventDialogComponent,
     AddEventDialogComponent,
-    UpdateEventDialogComponent
+    UpdateEventDialogComponent,
+    // all entry for adminpanel/Dialogs
   ],
-  providers: [WorkService, RememberService, MemberService, EventService],
+  providers: [WorkService, RememberService, MemberService, EventService, MyService, MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

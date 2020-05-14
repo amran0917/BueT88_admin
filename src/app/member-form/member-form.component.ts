@@ -1,3 +1,4 @@
+import { MemberFormService } from './../services/member-form.service';
 import { Hall } from './../interface/hall.interface';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -31,12 +32,12 @@ export class MemberFormComponent implements OnInit {
   ];
 
   partner = ['Yes', 'No'];
-
+  // partner: any;
   blood = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
-  country = ['USA','Uk', 'Italy','Canada','France','Germany','Afghanistan'];
+  country = ['USA', 'Uk', 'Italy', 'Canada','France','Germany','Afghanistan'];
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private service: MemberFormService) {
     this.selectForm = this. fb.group({
         deptControl: [ 'Department'],
         hallControl: ['Hall'],
@@ -49,4 +50,12 @@ export class MemberFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getpartner(): any {
+    this.service.getLifePartner('api/partner').subscribe((res: any) => {
+
+      this.partner = res;
+    });
+
+
+  }
 }

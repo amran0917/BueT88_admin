@@ -1,7 +1,7 @@
+import { WorkService } from './../../services/work.service';
+import { AddHall } from './../../interface/AddHall.interface';
 import { DataSource } from '@angular/cdk/table';
-import { AddHall } from '../interface/AddHall.interface';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
-import { WorkService } from '../services/work.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Observable, merge } from 'rxjs';
@@ -63,8 +63,8 @@ export class ExampleDataSource extends DataSource<AddHall> {
             let propertyB: number | string = '';
 
             switch (this._sort.active) {
-                case 'code': [propertyA, propertyB] = [a.code, b.code]; break;
-                case 'name': [propertyA, propertyB] = [a.name, b.name]; break;
+                case 'Id': [propertyA, propertyB] = [a.code, b.code]; break;
+                case 'Name': [propertyA, propertyB] = [a.name, b.name]; break;
             }
             const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
             const valueB = isNaN(+propertyB) ? propertyB : +propertyB;

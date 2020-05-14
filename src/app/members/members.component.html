@@ -1,86 +1,335 @@
+
+
 <div class="container-fluid content-container member-container">
     <div class="row">
 
-            <div class="col-md-12">
-                <div class="card mb-4 wow fadeIn animated" 
-                style="visibility: visible; animation-name: fadeIn;">
+        <div class="col-md-12">
+            <div class="card mb-4 wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
 
-            <!--Card content-->
-                    <div class="card-body d-sm-flex justify-content-between card-header">
+        <!--Card content-->
+        <div class="card-body d-sm-flex justify-content-between card-header">
 
-                        <h4 class="mb-2 mb-sm-0 pt-1">
-                        All members <span class="badge badge-info badge-pill pull-right">9</span>
-                        </h4>
+          <h4 class="mb-2 mb-sm-0 pt-1">
+           All members <span class="badge badge-info badge-pill pull-right">8</span>
+          </h4>
 
-                        <form class="d-flex justify-content-center">
-                            <!-- Default input -->
-                        
+          <form class="d-flex justify-content-center">
+            <!-- Default input -->
+           
 
-                            <button type="button" mdbBtn color="primary" class="
-                            btn-info waves-light search-btn ml-3" mdbWavesEffect data-toggle="modal" data-target="#searchBar">  <i class="fas fa-sliders-h"></i></button>
+              <button type="button" mdbBtn color="primary" class="
+            btn-info waves-light search-btn ml-3" mdbWavesEffect data-toggle="modal" data-target="#searchBar">  <i class="fas fa-sliders-h"></i></button>
 
-                        </form>
+          </form>
 
-                    </div>
-                </div>
-            </div>
-
-        <!-- ekhan hote kata hoiche-->
-   
- 
-        <div *ngFor="let col of data; let i=index"> 
-
-    <div class="col-lg-2 col-md-3 mb-4">
-
-                  <!--Card-->
-        <div class="card testimonial-card">
-
-                      <!--Bacground color-->
-            <div class="card-up purple-gradient">
-            </div>
-
-                      <!--Avatar-->
-            <div class="avatar mx-auto white">
-                <img src="assets/Images/team-3.jpg" class="rounded-circle">
-             </div>
-
-
-             <div class="card-body">
-                          <!--Name-->
-                               <h4 class="card-title"> <a routerLink="member-details"> {{col.Name}}</a></h4> 
-                            <p class="blue-grey-text"> {{col.Department}}</p> 
-
-                                <hr>
-                                <!--Quotation-->
-
-                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>{{col.Hall}}</p>
-            </div>
-            </div>
          
-             </div>
-             
 
         </div>
 
+      </div>
+        </div>
+
+<div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
                   <!--/.Card-->
 
-     </div>
+              </div>
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
 
 
-              
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+
+              <div class="col-lg-2 col-md-3 mb-4">
+
+                  <!--Card-->
+                  <div class="card testimonial-card">
+
+                      <!--Bacground color-->
+                      <div class="card-up purple-gradient">
+                      </div>
+
+                      <!--Avatar-->
+                      <div class="avatar mx-auto white">
+                          <img src="assets/Images/team-3.jpg" class="rounded-circle">
+                      </div>
+
+                      <div class="card-body">
+                          <!--Name-->
+                          <h4 class="card-title"><a  routerLink="member-details">John Doe</a></h4>
+                              <p class="blue-grey-text">
+                             Architecture</p>
+
+                          <hr>
+                          <!--Quotation-->
+
+                        <p class="m-0 blue-grey-text"><i class="far fa-building mr-2 brown-text"></i>Ahsanullah Hall</p>
+                      
+                      
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+
+              </div>
+
+
+              </div>
 </div>
+<!-- 
+<footer class="site-footer">
+    <div class="text-center" style="line-height: 50px;">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> buet88club.com</a>
+    </div>
 
-<!-- <app-footer> </app-footer> -->
+</footer> -->
+<app-footer> </app-footer>
+
 
 	
 	<!-- Modal -->
 	<div class="modal right fade" id="searchBar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
+
 			
-   
+    
+    <app-member-form> </app-member-form>
+    <!-- Default form login -->
+
 
 			</div><!-- modal-content -->
 		</div><!-- modal-dialog -->
-    </div><!-- modal -->
-    <!-- <app-member-form> </app-member-form> -->
+	</div><!-- modal -->

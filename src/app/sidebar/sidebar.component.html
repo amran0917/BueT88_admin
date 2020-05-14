@@ -1,25 +1,29 @@
 <div class="list-group list-group-flush">
-    <a routerLink="/login/admin-menu/add-hall" class="list-group-item list-group-item-action waves-effect active">
+    <a routerLink="/admin"  routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}"
+     class="list-group-item list-group-item-action waves-effect">
         <i class="far fa-building mr-3"></i>Hall
     </a>
 
-     <a routerLink="/login/admin-menu/add-event" class="list-group-item list-group-item-action waves-effect">
+     <a routerLink="/login/admin-menu/add-event" routerLinkActive="active"  class="list-group-item list-group-item-action waves-effect ">
         <i class="far fa-calendar-alt mr-3"></i>Events
     </a>
 
-     <a routerLink="add-members" class="list-group-item list-group-item-action waves-effect">
+     <a routerLink="add-members" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
         <i class="far fa-address-card mr-3"></i>Member
     </a>
 
-     <a routerLink="" class="list-group-item list-group-item-action waves-effect">
+     <a routerLink="/admin/department"  routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}"
+      class="list-group-item list-group-item-action waves-effect ">
         <i class="fas fa-door-open mr-3"></i>Department
     </a>
 
-     <a class="list-group-item list-group-item-action waves-effect">
+     <a routerLink = "add-publication"  routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
         <i class="far fa-newspaper mr-3"></i>Publication
     </a>
 
-     <a routerLink="add-members" class="list-group-item list-group-item-action waves-effect">
+     <a routerLink="add-members" routerLinkActive="active"  class="list-group-item list-group-item-action waves-effect">
         <i class="far fa-user-circle mr-3"></i>User
     </a>
  </div>

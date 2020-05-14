@@ -6,7 +6,8 @@ import {ToastrService} from 'ngx-toastr';
 
 @Injectable()
 export class WorkService {
-  private url = 'https://localhost:44342/api/values';
+  private url = 'http://118.179.215.4:4567/club/halls' ;//'https://localhost:44342/api/values';
+
   private url2 = 'https://localhost:44342/api/configs';
   dataChange: BehaviorSubject<AddHall[]> = new BehaviorSubject<AddHall[]>([]);
 
@@ -69,7 +70,7 @@ export class WorkService {
 // }
   updateIssue(issue: AddHall): void {
     this.dialogData = issue;
-    this.http.put(this.url + issue.Id, issue).subscribe();
+    this.http.put(this.url + issue.code, issue).subscribe();
   }
 
   deleteIssue(id: number): void {

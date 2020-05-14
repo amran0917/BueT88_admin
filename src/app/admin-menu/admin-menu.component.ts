@@ -43,12 +43,11 @@ export class AdminMenuComponent implements OnInit, AfterViewInit, OnChanges {
   // ];
 
 
-  // memberConfigs = [
-  //   {name: 'Position'},
-  //   {name: 'Name'},
-  //   {name: 'AddedOn'},
-  //   {name: 'Action'}
-  // ];
+  memberConfigs = [
+    {name: 'code'},
+    {name: 'name'},
+    {name: 'Action'}
+  ];
 
   // dataSource: MatTableDataSource<any>;
   constructor(private dialog: MatDialog, public httpClient: HttpClient, private dataService: WorkService) { }
@@ -73,12 +72,12 @@ export class AdminMenuComponent implements OnInit, AfterViewInit, OnChanges {
   ngOnChanges(): void {
   }
   public  getmemberConfigCall(): any {
-    // this.displayedColumns = this.memberConfigs.map(item  => item.name);
-    this.dataService.getCofig() .subscribe((res) => {
-      this.config = res;
-      this.displayedColumns = this.config.map(item => item.name);
+    this.displayedColumns = this.memberConfigs.map(item  => item.name);
+    // this.dataService.getCofig() .subscribe((res) => {
+    //   this.config = res;
+    //   this.displayedColumns = this.config.map(item => item.name);
 
-    });
+    // });
   }
 
   public getDataCall(): any {
@@ -127,7 +126,7 @@ export class AdminMenuComponent implements OnInit, AfterViewInit, OnChanges {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
-        const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.Id === this.Id);
+        const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.code === this.Id);
         this.exampleDatabase.dataChange.value[foundIndex] = this.dataService.getDialogData();
         this.refreshTable();
       }
@@ -143,7 +142,7 @@ export class AdminMenuComponent implements OnInit, AfterViewInit, OnChanges {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
-        const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.Id === this.Id);
+        const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.code === this.Id);
         this.exampleDatabase.dataChange.value.splice(foundIndex, 1);
         this.refreshTable();
       }
